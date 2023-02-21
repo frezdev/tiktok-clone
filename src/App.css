@@ -1,0 +1,20 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.App {
+  min-height: 100vh;
+  text-align: center;
+  background-color: #0f0e0e;
+  display: grid;
+  place-content: center;
+}
+
+main {
+  border: 1px solid #fff;
+  aspect-ratio: 9/16;
+  max-width: 400px;
+  width: 100vw;
+  margin: auto;
+}
