@@ -1,21 +1,16 @@
 @font-face {
-  font-family: 'ProximaNova';
-  src: url('assets/fonts/Proxima-Nova-Regular.woff2') format('woff2');
+  font-family: 'Proxima Nova';
+  src: url('/assets/fonts/Proxima-Nova-Regular.woff2') format('woff2');
   font-weight: 400;
 }
 @font-face {
-  font-family: 'ProximaNova';
-  src: url('assets/fonts/ProximaNova-Semibold.woff2') format('woff2');
+  font-family: 'Proxima Nova';
+  src: url('/assets/fonts/ProximaNova-Semibold.woff2') format('woff2');
   font-weight: 600;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 :root {
-  font-family: 'ProximaNova',Arial,Tahoma,PingFangSC,sans-serif;
+  font-family: 'Proxima Nova',Arial,Tahoma,PingFangSC,sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -28,4 +23,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
