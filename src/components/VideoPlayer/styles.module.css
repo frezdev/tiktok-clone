@@ -1,23 +1,41 @@
 .video {
   width: 100%;
+  min-height: 100vh;
   height: 100%;
 }
 
-/* .wrapper {
-
-} */
-
-.player {
-  width: 62px;
-  height: 62px;
-  background-image: url(/assets/player.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  background-color: transparent;
-  border: none;
+.wrapper {
+  position: relative;
 }
 
+.player {
+  background-color: transparent;
+  background-image: url("assets/player.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: 0;
+  height: 62px;
+  inset: 0;
+  margin: auto;
+  position: absolute;
+  width: 62px;
+}
+
+.hidden {
+  transition: .3s;
+  opacity: 0;
+}
+
+.actions {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+.action {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
