@@ -4,18 +4,19 @@
 }
 
 .App {
-  min-height: 100vh;
-  text-align: center;
-  background-color: #0f0e0e;
-  display: grid;
   place-content: center;
+  overflow: hidden;
+  height: 100vh;
+  display: grid;
+  background: #000;
 }
 
 main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: auto;
+  display: block;
   border-radius: 3px;
-  overflow: scroll;
   aspect-ratio: 9/16;
-  max-width: 400px;
-  width: 100vw;
-  margin: auto;
 }
