@@ -10,7 +10,7 @@
 
 .player {
   background-color: transparent;
-  background-image: url("assets/player.png");
+  background-image: url("/assets/player.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -25,62 +25,4 @@
 .hidden {
   opacity: 0;
   transition: .3s;
-}
-
-.actions {
-  bottom: 140px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  position: absolute;
-  right: 16px;
-  z-index: 1;
-}
-.action {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: transparent;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-.description {
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
-  display: flex;
-  gap: 50px;
-  align-items: center;
-  padding: 15px 15px 25px;
-}
-
-.album {
-  animation: rotate 3s infinite linear;
-  background-image: url(/assets/album.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.albumCover {
-  width: 55%;
-  border-radius: 50%;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
 }

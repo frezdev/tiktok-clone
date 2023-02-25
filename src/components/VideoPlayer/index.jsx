@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react'
 import clsx from 'clsx'
 import styles from './styles.module.css'
-import VideoPlayerActions from './VideoPlayerActions'
-import VideoDescription from './VideoDescription'
+import VideoPlayerActions from '../VideoPlayerActions'
+import VideoDescription from '../VideoDescription'
 
 export default function VideoPlayer ({ src, author, description, albumCover }) {
   const [playing, setPlaying] = useState(false)
@@ -35,10 +35,9 @@ export default function VideoPlayer ({ src, author, description, albumCover }) {
         className={playerClassName}
         onClick={handlePlay}
       />
-      <VideoPlayerActions />
+      <VideoPlayerActions albumCover={albumCover} />
       <VideoDescription
         description={description}
-        albumCover={albumCover}
         author={author}
       />
     </div>
