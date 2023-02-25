@@ -1,7 +1,8 @@
 import React from 'react'
+import SongTicker from '../SongTicker'
 import styles from './styles.module.css'
 
-export default function VideoDescription ({ author, description }) {
+export default function VideoDescription ({ author, description, songTitle }) {
   return (
     <div className={styles.description}>
       <div className={styles.textWrapper}>
@@ -13,6 +14,7 @@ export default function VideoDescription ({ author, description }) {
         <p className={styles.text}>
           {description}
         </p>
+        <SongTicker songTitle={songTitle} />
       </div>
     </div>
   )
