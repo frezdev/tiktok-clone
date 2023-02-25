@@ -9,15 +9,13 @@
   font-weight: 600;
 }
 
-:root {
-  font-family: 'Proxima Nova',Arial,Tahoma,PingFangSC,sans-serif;
-}
-
 html {
   box-sizing: border-box;
   margin: 0;
+  font-family: 'Proxima Nova',Arial,Tahoma,PingFangSC,sans-serif;
 }
-*, *:before, *:after {
+
+*, *::before, *::after {
   padding: 0;
   margin: 0;
   box-sizing: inherit;
