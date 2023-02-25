@@ -1,8 +1,8 @@
 export const Heart = ({ fill }) => {
   return (
     <svg
-      width='45'
-      height='56'
+      width='40'
+      height='40'
       viewBox='8 8 40 40'
       fill='none'
     >
