@@ -1,25 +1,42 @@
+import { useState } from 'react'
 import { Heart } from '../icons/Heart'
 import { Comment } from '../icons/Comment'
 import { Share } from '../icons/Share'
 import styles from './styles.module.css'
 
-export default function VideoPlayerActions ({likes = 1522, comments = 550, shares = 500, hearted = false}) {
+export default function VideoPlayerActions (props) {
+  const { likes = 1522, comments = 550, shares = 500, hearted = false } = props
+  const [liked, setLiked] = useState(false)
+
+  const handleLike = () => {
+    // window.alert('like')
+    setLiked(!liked)
+  }
+
+  const handleComment = () => {
+    window.alert('comment')
+  }
+
+  const handleShare = () => {
+    window.alert('share')
+  }
+
   return (
     <aside className={styles.actions}>
-      <div className={styles.action}>
-        <Heart width='45' />
-        <strong title='likes'>{likes}</strong>
-      </div>
+      <button onClick={handleLike} className={styles.action}>
+        <Heart fill={(hearted || liked) ? '#fe2c55' : 'currentColor'} width='40' />
+        <span title='likes'>{likes}</span>
+      </button>
 
-      <div className={styles.action}>
-        <Comment width='45' />
-        <strong title='comments'>{comments}</strong>
-      </div>
+      <button onClick={handleComment} className={styles.action}>
+        <Comment width='40' />
+        <span title='comments'>{comments}</span>
+      </button>
 
-      <div className={styles.action}>
-        <Share width='45' />
-        <strong title='shares'>{shares}</strong>
-      </div>
+      <button onClick={handleShare} className={styles.action}>
+        <Share width='40' />
+        <span title='shares'>{shares}</span>
+      </button>
     </aside>
   )
 }
