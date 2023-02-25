@@ -7,3 +7,30 @@
   height: 15px;
   padding-right: 15px;
 }
+
+.album {
+  animation: rotate 4s infinite linear;
+  background-image: url(/assets/album.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 49px;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.albumCover {
+  width: 70%;
+  border-radius: 50%;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
