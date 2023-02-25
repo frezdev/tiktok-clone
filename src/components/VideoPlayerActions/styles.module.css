@@ -1,0 +1,21 @@
+.actions {
+  bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 12px;
+  z-index: 6;
+}
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 16px;
+  font-family: 'Proxima Nova';
+}
