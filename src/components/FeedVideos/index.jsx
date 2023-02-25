@@ -23,7 +23,7 @@ const VIDEOS = [
     description: '2 meses de Argentina vs Croacia | no copyright infringement #messi #argentina #fypシ #parati #julianalvarez #messifans #foryou #scaloneta #fyp #modric',
     likes: 123,
     shares: 234,
-    songTitle: 'sonido original - leidyceledon',
+    songTitle: 'sonido original - yenrva',
     albumCover: albumCoverImg,
     comments: 357,
     src: videoSrc2
