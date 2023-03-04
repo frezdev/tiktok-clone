@@ -1,38 +1,30 @@
-import React from 'react'
-import videoSrc from '../../../assets/video.mp4'
-import videoSrc2 from '../../../assets/video2.mp4'
-import albumCoverImg from '../../../assets/albumCoverImg.jpg'
+import { useEffect, useState } from 'react'
 import VideoPlayer from '../VideoPlayer'
 import styles from './styles.module.css'
-
-const VIDEOS = [
-  {
-    id: 1,
-    author: 'leidyceledon',
-    description: '2 meses de Argentina vs Croacia | no copyright infringement #messi #argentina #fypシ #parati #julianalvarez #messifans #foryou #scaloneta #fyp #modric',
-    likes: 123,
-    shares: 234,
-    songTitle: 'sonido original - leidyceledon',
-    albumCover: albumCoverImg,
-    comments: 357,
-    src: videoSrc
-  },
-  {
-    id: 2,
-    author: 'yenrva',
-    description: '2 meses de Argentina vs Croacia | no copyright infringement #messi #argentina #fypシ #parati #julianalvarez #messifans #foryou #scaloneta #fyp #modric',
-    likes: 123,
-    shares: 234,
-    songTitle: 'sonido original - yenrva',
-    albumCover: albumCoverImg,
-    comments: 357,
-    src: videoSrc2
-  }
-]
+import { getVideos } from '../../services'
 
 export default function FeedVideos () {
+  const [videos, setVideos] = useState([])
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    getVideos()
+      .then(current => {
+        const [data, error] = current
+        if (error) return setError(error)
+        setVideos(data)
+        console.log(data)
+      })
+  }, [])
+
+  if (error) {
+    return (
+      <span>{error}</span>
+    )
+  }
+
   return (
-    VIDEOS.map(video => (
+    videos.map(video => (
       <div key={video.id} className={styles.item}>
         <VideoPlayer {...video} />
       </div>
