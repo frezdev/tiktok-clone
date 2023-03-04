@@ -7,6 +7,7 @@
   right: 12px;
   z-index: 6;
 }
+
 .action {
   display: flex;
   justify-content: center;
@@ -18,4 +19,25 @@
   cursor: pointer;
   margin-bottom: 16px;
   font-family: 'Proxima Nova';
+}
+
+.avatarContainer {
+  position: relative;
+  display: flex;
+  z-index: 5;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+
+.avatar {
+  width: 49px;
+  height: 49px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
