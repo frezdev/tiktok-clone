@@ -13,7 +13,6 @@ export default function FeedVideos () {
         const [data, error] = current
         if (error) return setError(error)
         setVideos(data)
-        console.log(data)
       })
   }, [])
 
