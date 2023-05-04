@@ -23,10 +23,18 @@ export default function FeedVideos () {
   }
 
   return (
-    videos.map(video => (
-      <div key={video.id} className={styles.item}>
-        <VideoPlayer {...video} />
-      </div>
-    ))
+    <div className={styles.container}>
+      {
+        videos.length > 0
+          ? (
+              videos?.map(video => (
+                <div key={video.id} className={styles.item}>
+                  <VideoPlayer {...video} />
+                </div>
+              ))
+            )
+          : <h3>No hay videos</h3>
+      }
+    </div>
   )
 }

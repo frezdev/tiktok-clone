@@ -8,7 +8,6 @@
   overflow: hidden;
   height: 100vh;
   display: grid;
-  background: #000;
 }
 
 main {
@@ -18,5 +17,8 @@ main {
   height: auto;
   display: block;
   border-radius: 3px;
-  aspect-ratio: 9/16;
+  /* aspect-ratio: 9/16; */
+  width: 100vw;
+  max-width: 500px;
+  
 }

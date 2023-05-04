@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 const options = {
   root: document.querySelector('main'),
   rootMargin: '0px',
-  threshold: 0.9
+  threshold: 0.7
 }
 
 const observer = new window.IntersectionObserver((entries) => {

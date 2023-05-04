@@ -26,7 +26,8 @@
 }
 
 .textWrapper {
-  max-width: 290px;
+  width: 85%;
+  max-width: 250px;
   line-height: 1.3;
   padding-right: 32px;
 }

@@ -1,0 +1,143 @@
+.upload {
+  background-color: #fff;
+  min-height: 100vh;
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.upload h1 {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.form > * {
+  margin-bottom: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form label {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.form label input {
+  display: block;
+  padding: 8px;
+  margin-top: 5px;
+  width: 100%;
+  border: 1px solid #d0d1d3;
+  border-radius: 3px;
+  outline-width: 1px;
+  outline-color: #d0d1d3;
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+}
+
+.form button {
+  background-color: rgba(254,44,85,1);
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  color: #fff;
+  padding: 9px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-family: 'Proxima Nova';
+}
+.form button:hover {
+  background-color: rgba(234,40,78,1);
+}
+
+.dnd {
+  border: 3px dashed #d0d1d3;
+  border-radius: 7px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px;
+  aspect-ratio: 9/14;
+  gap: 16px;
+  transition: background-color .3s ease;
+}
+
+.dnd img {
+  margin-bottom: 24px;
+}
+
+.dnd h4 {
+  font-size: 18px;
+  font-family: 'Proxima Nova';
+  font-weight: 600;
+  color: rgba(22, 24, 35, 1);
+}
+.dnd h5 {
+  font-size: 14px;
+  font-family: 'Proxima Nova';
+  font-weight: 400;
+  color: rgba(22,24,35,0.75)
+}
+
+.dndList {
+  margin-top: 20px;
+  list-style: none;
+  display: grid;
+  font-size: 14px;
+  place-items: center;
+  gap: 16px;
+  color: rgba(22,24,35,0.5);
+}
+
+.dndAccept {
+  background-color: rgb(221, 255, 202);
+}
+.dndReject {
+  background-color: rgb(255, 202, 202);
+  animation: shake .2s infinite ease;
+}
+
+.uploading {
+  animation: pulse .7s infinite ease;
+  background-color: #f4f4f4;
+}
+.uploaded {
+  background-color: rgb(221, 255, 202);
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .8;
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translate3d(-1px, 1px,0,0) rotate(1deg); }
+  15% { transform: translate3d(-2px,0,0) rotate(0deg); }
+  30% { transform: translate3d(1px,-1px,0) rotate(-1deg); }
+  45% { transform: translate3d(0,0,0) rotate(0deg); }
+  60% { transform: translate3d(-1px,1px,0) rotate(1deg); }
+  75% { transform: translate3d(0,0,0) rotate(0deg); }
+  90% { transform: translate3d(-1px,1px,0) rotate(-1deg); }
+  100% { transform: translate3d(0,0,0) rotate(0deg); }
+}
